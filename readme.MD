@@ -116,7 +116,7 @@ r-x = guest
 * **necessary options for mongod**
   * --dbpath => storage.dbPath
   * --logpath => systemLog.path, systemLog.destination
-  * --bind-ip => net.bind-ip
+  * --bind_ip => net.bindIp
     * network adapter on a host that provides access to the network otherwise mongod will only accept connections on the same host.
   * --replSet and keyFile  => replication.replSetName and security.keyFile
     * starts mongod with basic auth security and user authentication enabled
@@ -129,7 +129,7 @@ r-x = guest
 mongod --config "etc/mongod.conf"
 ```yaml
 storage:
-  dbPath: "/data/db"
+  dbPath: /data/db
 systemLog:
   path: "/data/log.mongod.log"
   destination: "file"
@@ -146,6 +146,7 @@ security:
 processManagement:
   fork : true
   ```
+  you should look at the conf i provided in mongodb.conf. much more updated.
 </details>
   
 ## Gotchas
